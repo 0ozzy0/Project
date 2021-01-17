@@ -1,0 +1,27 @@
+{% extends "Home/base.html" %}
+        {% block content %}
+            <style>
+                  .my {
+                    color : green;
+                    padding: 10px;
+                    font-size: 30px;
+                    text-align: center;  }
+              </style>
+                <h2 class = "my"> PROJECTS </h2>
+        <body>  <ul>
+                    {% for project in page.object_list %}
+                    <li> <b> {{forloop.counter0|add:page.start_index }} - <a href=" {% url 'detail' project.id %}    ">
+                        {{ project }}  </a> </b> </li>
+                {% endfor %}
+               </ul>
+                <div class = "page_links">
+                    {% if page.has_previous %}
+                        <a href = "{% url 'home' %}?page={{ page.previous_page_number }} "> Previous Page</a>
+                    {% endif %}
+                    {% if page.has_next %}
+                    <a href = "{% url 'home' %}?page={{ page.next_page_number }} ">Next Page</a>
+                    {% endif %}
+                </div>
+        </body>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "Home/base.html" %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block content %}
+                <style>
+              .center {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               width: 50%;
+                     }
+              .my {
+                color : green;
+                padding: 10px;
+
+                font-size: 40px;
+                text-align: center;    }
+                     </style>
+<body>
+
+    <h1 class="my">  STATUS OF THE PROJECTS        </h1>
+     <img src = "data:image/png;base64, {{data}}" class="center" alt = " " height="250", width="250" >
+</body>
+{% endblock %}
