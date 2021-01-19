@@ -7,7 +7,7 @@
                     font-size: 30px;
                     text-align: center;  }
               </style>
-                <h2 class = "my"> PROJECT</h2>
+                <h2 class = "my"> PROJECTS</h2>
         <body>  <ul>
                     {% for project in page.object_list %}
                     <li> <b> {{forloop.counter0|add:page.start_index }} - <a href=" {% url 'detail' project.id %}    ">
