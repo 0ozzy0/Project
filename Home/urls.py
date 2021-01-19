@@ -16,6 +16,6 @@ urlpatterns = [
     path('graph7/', views.graph7, name="graph7"),
     path('graph8/', views.graph8, name="graph8"),
     path('graph9/', views.graph9, name="graph9"),
-    path('', views.project, name="home")
+    path('', views.mainpage, name="mainpage")
 
 ]

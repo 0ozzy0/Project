@@ -1,0 +1,39 @@
+{% extends "Home/base.html" %}
+        {% block content %}
+            <style>
+                  .my {
+                    color : green;
+                    padding: 10px;
+                    font-size: 30px;
+                    text-align: center;  }
+                  .design{
+                      width: 1200px;
+                      margin: auto;
+
+                  }
+                  .align{
+                      float:left;
+                      padding: 0 10px 10px 0;
+                  }
+                  a:link, a:visited{
+                      color: darkviolet;
+                      font-size: 20px;
+                  }
+              </style>
+                <h2 class = "my"> Kickstarter Data Analysis </h2>
+        <body>
+        <div class="design">
+        <img src="/static/mainpage.png/" class = "align">
+            <a href="{% url 'graph' %} ">Project Status Distribution</a><br />
+            <a href="{% url 'graph2' %}">Category Distribution</a><br />
+            <a href="{% url 'graph3' %}">Time/Success Rate</a><br />
+            <a href="{% url 'graph4' %}">Monthly Success Distribution</a><br />
+            <a href="{% url 'graph5' %}">Most Popular Categories</a><br />
+            <a href="{% url 'graph6' %}">Categorywise Success Distribution</a><br />
+            <a href="{% url 'graph7' %}">Project Country Distribution</a><br />
+            <a href="{% url 'graph8' %}">Success Rate Per Year</a><br />
+            <a href="{% url 'graph9' %}">Total Money Raised by Category</a><br />
+
+                </div>
+        </body>
+{% endblock %}

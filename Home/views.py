@@ -100,5 +100,9 @@ def graph9(request):
     return render(request, "Home/graphs.html", context)
 
 
+def mainpage(request):
+    return render(request, "Home/mainpage.html")
+
+
 def about(request):
     return render(request, "Home/about.html")
